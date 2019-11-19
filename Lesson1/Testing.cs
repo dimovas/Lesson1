@@ -32,6 +32,24 @@ namespace Lesson1
             obj = 11 + 5.55 + 5.5f;
             WhoIsWho("obj", obj);
         }
+
+        object Back(object any)
+        {
+            return (any);
+        }
+
+        public void BackTest()
+        {
+            ux = (uint)Back(ux);
+            WhoIsWho("ux", ux);
+            s1 = (string)Back(s);
+            WhoIsWho("s1", s1);
+            x = (int)(uint)Back(ux);
+            WhoIsWho("x", x);
+            y = (float)(double)Back(11 + 5.55 + 5.5f);
+            WhoIsWho("y", y);
+                
+        }
     }
 }
 
