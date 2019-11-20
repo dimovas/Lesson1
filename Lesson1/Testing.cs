@@ -91,6 +91,32 @@ namespace Lesson1
             OLoad(y, dy);
             OLoad(x, dy);
         }
+        
+        public void ToStringTest()
+        {
+            s = "Владимир Петров ";
+            s1 = "Возраст: ";
+            ux = 27;
+            s = s + s1 + ux.ToString();
+            s1 = " Зарплата: ";
+            dy = 2700.5;
+            s = s + s1 + dy;
+            WhoIsWho("s", s);
+        }
+
+        public void FromStringTest()
+        {
+            s = "Введите возраст ";
+            Console.WriteLine(s);
+            s1 = Console.ReadLine();
+            ux = Convert.ToUInt32(s1);
+            WhoIsWho("Возраст: ", ux);
+            s = "Введите зарплату ";
+            Console.WriteLine(s);
+            s1 = Console.ReadLine();
+            dy = Convert.ToDouble(s1);
+            WhoIsWho("Зарплата: ", dy);
+        }
     }
 }
 

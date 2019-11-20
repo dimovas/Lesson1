@@ -15,9 +15,9 @@ namespace Lesson1
             Console.WriteLine("Testing.OLoad Test");
             tm.OLoadTest();
             Console.WriteLine("Testing.ToString Test");
-            //tm.ToStringTest();
+            tm.ToStringTest();
             Console.WriteLine("Testing.FromString Test");
-           // tm.FromStringTest();
+            tm.FromStringTest();
             Console.WriteLine("Testing.CheckUnchek Test");
            // tm.CheckUnchekTest();
             Console.ReadLine();
