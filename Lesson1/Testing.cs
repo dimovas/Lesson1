@@ -48,7 +48,48 @@ namespace Lesson1
             WhoIsWho("x", x);
             y = (float)(double)Back(11 + 5.55 + 5.5f);
             WhoIsWho("y", y);
-                
+           
+        }
+
+        void OLoad (float par)
+        {
+            Console.WriteLine("Float value {0}", par);
+        }
+        void OLoad(long par)
+        {
+            Console.WriteLine("Long value {0}", par);
+        }
+        void OLoad(ulong par)
+        {
+            Console.WriteLine("Ulong value {0}", par);
+        }
+        void OLoad(double par)
+        {
+            Console.WriteLine("Double value {0}", par);
+        }
+        void OLoad(long par1, long par2)
+        {
+            Console.WriteLine("Long par1 {0}, Long par2 {1}", par1, par2);
+        }
+        void OLoad(double par1, double par2)
+        {
+            Console.WriteLine("Double par1 {0}, Double par2 {1}", par1, par2);
+        }
+        void OLoad(int par1, float par2)
+        {
+            Console.WriteLine("Int par1 {0}, Float par2 {1}", par1, par2);
+        }
+
+        public void OLoadTest()
+        {
+            OLoad(x);
+            OLoad(ux);
+            OLoad(y);
+            OLoad(dy);
+            // OLoad(x,ux); //conflict (int, float) & (long, long)
+            OLoad(x,(float)ux);
+            OLoad(y, dy);
+            OLoad(x, dy);
         }
     }
 }

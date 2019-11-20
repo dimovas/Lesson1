@@ -13,13 +13,13 @@ namespace Lesson1
             Console.WriteLine("Testing.Back Test");
             tm.BackTest();
             Console.WriteLine("Testing.OLoad Test");
-         //   tm.OLoadTest();
+            tm.OLoadTest();
             Console.WriteLine("Testing.ToString Test");
-         //   tm.ToStringTest();
+            //tm.ToStringTest();
             Console.WriteLine("Testing.FromString Test");
-         //   tm.FromStringTest();
+           // tm.FromStringTest();
             Console.WriteLine("Testing.CheckUnchek Test");
-         //   tm.CheckUnchekTest();
+           // tm.CheckUnchekTest();
             Console.ReadLine();
         }
     }
