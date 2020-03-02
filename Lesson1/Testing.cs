@@ -117,6 +117,72 @@ namespace Lesson1
             dy = Convert.ToDouble(s1);
             WhoIsWho("Зарплата: ", dy);
         }
+
+        public void CheckUncheckTest()
+        {
+            x = -25 ^ 2;
+            WhoIsWho("x", x);
+            b = 255;
+            WhoIsWho("b", b);
+
+            checked
+            {
+                try
+                {
+                    b += 1;
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine("Переполнение при вычислении b");
+                    Console.WriteLine(e);
+                }
+                try
+                {
+                    b = (byte)x;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Переполнение при преобразовании к  byte");
+                    Console.WriteLine(e);
+                }
+                unchecked
+                {
+                    try
+                    {
+                        b += 1;
+                        WhoIsWho("b", b);
+                        b = (byte)x;
+                        WhoIsWho("b", b);
+                        ux = (uint)x;
+                        WhoIsWho("ux", ux);
+                        Console.WriteLine("Исключений нет, но результаты не верны!.");
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Этот текст не должен появляться");
+                        Console.WriteLine(e);
+                    }
+                    try
+                    {
+                        b = Convert.ToByte(x);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Переполнение при преобразовании к  byte");
+                        Console.WriteLine(e);
+                    }
+                    try
+                    {
+                        ux = Convert.ToUInt32(x);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Потеря знака при преобразовании к Uint!");
+                        Console.WriteLine(e);
+                    }
+                }
+            }
+        }
     }
 }
 

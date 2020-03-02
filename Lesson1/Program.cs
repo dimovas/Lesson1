@@ -17,10 +17,13 @@ namespace Lesson1
             Console.WriteLine("Testing.ToString Test");
             tm.ToStringTest();
             Console.WriteLine("Testing.FromString Test");
-            tm.FromStringTest();
+           // tm.FromStringTest();
             Console.WriteLine("Testing.CheckUnchek Test");
-           // tm.CheckUnchekTest();
+            tm.CheckUncheckTest();
             Console.ReadLine();
+
+            System.DateTime dat = Convert.ToDateTime("02.03.2020");
+            Console.WriteLine("Date = {0}", dat);
         }
     }
 }
